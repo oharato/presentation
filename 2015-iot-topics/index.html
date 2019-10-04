@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="ja">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>キーワードで振り返る2015年IoTトピックス</title>
+
+		<meta name="description" content="キーワードで振り返る2015年IoTトピックス">
+		<meta name="author" content="@oharato">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="../css/reveal.css">
+		<link rel="stylesheet" href="../css/theme/azusaish.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="../lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../css/print/pdf.css' : '../css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="../lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+			<section data-markdown=""
+				data-separator="^\n---"
+				data-separator-vertical="^\n--">
+				<script type="text/template">
+
+<!-- .slide: class="center tl-l"  -->
+# キーワードで<br>振り返る<br>2015年<br>IoTトピックス
+
+---
+
+<!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
+- 目次
+    - 02-02 Raspberry Pi 2
+    - 04-29 Windows10 IoT Core
+    - 07-07 ESP8266
+    - 07-27 myThings
+    - 09-30 SORACOM
+    - 10-09 AWS Iot
+    - 11-25 Raspberry Pi Zero
+    - 12-24 さくらのIoT Platform(仮称)
+    - 2016年の期待
+    - おまけ
+        - MQTT, NodeRed, ブロックチェーン
+
+---
+
+<!-- .slide: class="center"  -->
+# Raspberry Pi 2
+
+---
+
+![](raspi2.jpg)
+
+---
+
+<!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
+### Raspberry Pi 2
+- 2月2日 発表
+- 当時の最新機種Raspberry Pi Model B+と比較して
+    - お値段 そのまま $35
+    - CPU シングルコア700MHz → クアッドコア900MHz
+    - メモリ 512MB → 1GB
+- Raspberry Pi 2用のWindows10が無償で今後提供される、という発表
+
+---
+
+<!-- .slide: class="center"  -->
+# Windows10 IoT Core
+
+---
+
+<!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
+### Windows10 IoT Core
+- 4月29日 マイクロソフトの技術カンファレンス「Build 2015」で発表
+- Microsoft製の組込みOS
+    - Windows10のようなデスクトップ環境無し。
+
+---
+
+<!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
+### Windows10 IoT Core
+- 開発するには
+    - <em>Windows 10</em>のPCでWindows10 Iot CoreのディスクイメージをSDカードに書き込む
+    - <em>Visual Studio 2015</em>が必要
+- 個人的には、環境構築や開発が面倒
+
+---
+
+<!-- .slide: class="center"  -->
+# ESP8266
+
+---
+
+<!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
+### ESP8266
+- ESP8266(Espressif Systems社のワイヤレスSoC/System-on-a-chip)を使ったWi-Fiモジュールの一つ、「ESP-WROOM-02」が7月に発売開始
+    - ![](esp8266.jpg)
+
+---
+
+<!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
+### ESP8266
+- 秋月電子で650円
+- Arduino用のWiFiモジュールとしても使用でき、単体でWiFi搭載のArduinoマイコンとしても使用できる
+
+---
+
+<!-- .slide: class="center"  -->
+# myThings
+
+---
+
+<!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
+### myThings
+- 7月27日 提供開始
+- ヤフーが提供する、IoTプラットフォームおよびスマホアプリ
+- 自作のデバイスやガジェット、Webサービス(myThingsではチャンネルと呼ぶ)を組み合わせる
+- Webサービス同士を連携させるWebサービス「IFTTT」の日本版とよく言われている
+
+---
+
+<!-- .slide: data-background="rgb(62,64,87)" class="bg-black"  -->
+![](mythings_channels_trigger.jpg)
+
+---
+
+<!-- .slide: data-background="mythings_channels.jpg" class="bg-image tl-l"  -->
+### myThingsのチャンネル
+- Webサービス
+    - Yahoo!天気・災害
+    - ヤフオク！
+    - Twitter
+    - などなど
+
+---
+
+<!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
+### myThingsのチャンネル
+- 自作のデバイス
+    - IDCFクラウド(Yahooグループのクラウド)の利用が必須
+
+---
+
+<!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
+### myThingsのチャンネル
+- ガジェット
+    - Hackey - Webサービスをコントロールできるキースイッチ
+    - ![](hackey.jpg)
+
+--
+
+<!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
+### myThingsのチャンネル
+- ガジェット
+    - BOCCO 家族をつなぐコミュニケーションロボット
+    - ![](bocco.jpg)
+
+--
+
+<!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
+### myThingsのチャンネル
+- ガジェット
+    - ともだち家電 シャープ
+    - ![](tomodachikaden.png)
+
+--
+
+<!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
+### myThingsのチャンネル
+- ガジェット
+    - iRemocon
+    - ![](iremocon.jpg)
+
+---
+
+<!-- .slide: class="center"  -->
+# SORACOM
+
+---
+
+<!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
+### SORACOM
+- 9月30日発表
+- 元AWSのエバンジェリスト玉川憲さんが2015年3月にAWSを退職して設立したスタートアップ
+- SORACOM AirとSORACOM Beamの２つのサービス
+
+---
+
+<!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
+### SORACOM
+- MVNO事業者が持つハードウェア(パケット交換、回線管理、帯域制御、顧客管理、課金)を、AWS上でソフトウェアで実装
+- ![](soracom_air.jpg)
+
+---
+
+<!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
+### SORACOM Air
+- IoT向けのデータ通信SIM "Air SIM" を提供するモバイルデータ通信サービス
+    - LTE, 3Gエリアに対応
+    - ユーザーコンソール, API, SDKから多数のSIMを一括操作(AWS like)
+
+---
+
+<!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
+### SORACOM Air
+- 初期費用
+    - データ通信のみのSIM 888円(税込)
+- 基本料金(税別)
+    - 1日10円(データ通信のみ)
+
+---
+
+<!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
+### SORACOM Air
+- 従量課金(税別)→<em>上りが安い</em>
+    - 通常時間帯（日本時間 06:00-26:00）
+        - 最遅…上り0.2 円 / MB、下り0.6 円 / MB(上り下り共に32kbps)
+        - 最速…上り0.3 円 / MB、下り1.0 円 / MB(上り下り共に2Mbps)
+    - 深夜時間帯（日本時間 02:00-06:00）→<em>夜が安い</em>
+        - 最遅…上り0.2 円 / MB、下り0.2 円 / MB(上り下り共に32kbps)
+        - 最速…上り0.2 円 / MB、下り0.2 円 / MB(上り下り共に2Mbps)
+
+--
+
+<!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
+### 料金比較
+- 初期費用
+    - SORACOM 888円(税込)
+    - 0SIM 620円(税込、デジモノステーション2016/02)
+    - IIJmio 3000円(税抜)
+    - FREETEL  3000円(税抜)
+
+--
+
+<!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
+### 料金比較
+- 1ヶ月間500MB下り
+    - SORACOM 400円 (`10yen/day x 30days + 0.2yen/MB x 500MB`)
+    - 0SIM 0円 (基本料金0円、500MBまで0円)
+    - IIJmio 900円(3GBまで)
+    - FREETEL 499円 (1GBまで、100MBまでなら299円)
+
+--
+
+<!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
+### 料金比較
+- 1ヶ月間1GB下り
+    - SORACOM 500円 (`10yen/day x 30days + 0.2yen/MB x 1000MB`)
+    - 0SIM 500円 (`100yen/100MB x 500MB`)
+    - IIJmio 900円(3GBまで)
+    - FREETEL 499円 (1GBまで、3GBまでなら900円)
+
+---
+
+<!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
+### SORACOM Beam
+- データ転送支援サービス
+    - 暗号化
+        - ![](./soracom_beam.png)
+        - クライアント証明書をBeamで管理
+            - デバイスに証明書を入れなくて良くなる
+            - デバイスの暗号化処理をオフロード
+
+---
+
+<!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
+### SORACOM Beam
+- 料金
+    - 基本料金
+        - 無料
+    - 従量課金
+        - 1リクエストあたり0.0009円(税別)
+
+---
+
+<!-- .slide: class="center"  -->
+# AWS IoT
+
+---
+
+<!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
+## AWS IoT
+- AWSのIoTプラットフォーム
+- 10月9日の「AWS re:Invent 2015」で発表
+- 料金
+    - 100万通のメッセージあたり$8(東京リージョン)
+
+---
+
+<!-- .slide: data-background="aws_iot.png" class="tl-l"  -->
+
+--
+
+<!-- .slide: data-background="aws_iot.png" class="bg-image tl-l"  -->
+## AWS IoT
+- AWS IoT デバイス SDK
+    - C, JavaScript, Arduino
+- デバイスゲートウェイ
+    - MQTT, HTTP
+    - 自動的にスケール
+- 認証と認可
+    - AWSの認証メソッド(SigV4)およびX.509証明書ベースの認証
+
+--
+
+<!-- .slide: data-background="aws_iot.png" class="bg-image tl-l"  -->
+## AWS IoT
+- レジストリ
+    - デバイス管理
+- デバイスシャドウ
+    - オフライン時の仮想デバイス
+- ルールエンジン
+    - データをルールに従って転送
+    - SQLに似た構文
+    - 転送先はS3, DynamoDB, Kinesis, SNS, Lambdaなど
+
+---
+
+<!-- .slide: class="center"  -->
+# Raspberry Pi Zero
+
+---
+
+<!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
+### Raspberry Pi Zero
+- Pi Zero + Adaptors + Pibow Zero Case
+- ![](raspizero.jpg)
+
+---
+
+<!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
+### Raspberry Pi Zero
+- Pimoroniで12月14日に発注
+- 12月27日到着
+- £9.58 + Shipping £4.00 = £13.58(￥2602)
+- 600円くらいで買えると思ったら4倍くらいかかった
+
+---
+
+<!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
+### Raspberry Pi Zero
+- 11月25日発表
+- 特徴
+    - 安い(5ドル)
+    - 小さい(薄い)
+    - LANポート無し
+        - USBにWiFiドングルかSIMドングルを挿して通信
+        - セットアップ時にはUSBハブが無いとつらい
+
+---
+
+<!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
+### Raspberry Pi Zero
+- 特徴
+    - カメラモジュール使えない
+    - GPIOピン未実装
+        - 必要な分だけハンダ付け
+        - USBシリアル変換ケーブルが使いにくい
+    - micro USBポートが2つあるが1つは電源用。
+
+---
+
+<!-- .slide: class="center"  -->
+# さくらのIoT Platform
+
+---
+
+<!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
+### さくらのIoT Platform
+- 12月24日発表、2016年2月にテスター募集、春にβテスト
+- ![](sakura-iot-platform.jpg)
+
+---
+
+<!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
+### さくらのIoT Platform
+- SIMカードおよび通信プラン
+- SIMモジュール
+    - さくらのIoT閉域網にのみデータの送受信
+- プロトタイプボード
+    - Cerevo社のBlueNinja、GPSを搭載
+- クラウドサービス(DB、ストレージ、ルールエンジン、API)
+
+--
+
+<!-- .slide: data-background="rgb(50,180,144)" class="bg-green"  -->
+### BlueNinja
+![](blueninja.jpg)
+
+--
+
+<!-- .slide: data-background="rgb(50,180,144)" class="bg-green tl-l"  -->
+### BlueNinja
+- BLE対応
+- 速度・角度・地磁気・気圧の数値を取得
+- インターフェースは	GPIO / USB(device) / SPI / I2C / UART
+- GCCベースの開発環境、現在はC言語のみ
+
+---
+
+<!-- .slide: class="center"  -->
+# 2016年の期待
+
+---
+
+<!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
+### 格安のモバイル通信(3G, LTE)モジュール
+- SORACOMの登場で、SIMは安く入手できるが、SIMモジュールが高い
+    - 3GIM 23,760円
+    - 3GPI 29,800円
+    - L-02C 2,000～3,500円
+
+---
+
+<!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
+### IoT用の電源
+- 小型大容量の電池
+- ワイヤレス給電
+    - [10m離れた複数の端末にワイヤレス給電できる「Cota」、KDDIとOssiaがCES2016で展示 （Impress Watch） - Yahoo!ニュース](http://headlines.yahoo.co.jp/hl?a=20151222-00000068-impress-sci "10m離れた複数の端末にワイヤレス給電できる「Cota」、KDDIとOssiaがCES2016で展示 （Impress Watch） - Yahoo!ニュース")
+
+---
+
+<!-- .slide: class="center"  -->
+# おしまい
+
+---
+
+<!-- .slide: class="center"  -->
+# MQTT
+
+---
+
+<!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
+### MQTT
+- IoTやM2M(Machine-to-Machine)向けの軽量プロトコル
+    - ヘッダーは最小2バイト(GETリクエストヘッダの最小は14バイト)
+- 日本でMQTTといえば時雨堂の[sango](https://sango.shiguredo.jp/ "MQTT as a Service sango")(MQTT as a Service、Erlang製)が有名らしい
+
+---
+
+<!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
+### MQTT
+- Pub/Subモデルのシステム
+- ![](mqtt.png)
+
+--
+
+<!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
+### MQTT
+- Pub/Subモデルのシステム
+    - Publisher
+        - トピックに関してBroker宛にメッセージ発行
+    - Broker
+        - メッセージを仲介するサーバ
+    - Subscriber
+        - トピックに関してBrokerからメッセージ受信
+
+---
+
+<!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
+### MQTT
+- トピック
+    - メッセージは固有のトピックを持つ
+    - `/user_name/room/01/temperature`のような/区切りの階層構造
+    - Subscriberはトピックを指定して受信できる
+        - `/user_name/room/01/#` 前方一致
+        - `/user_name/room/+/temperature` 部分一致
+
+---
+
+<!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
+### MQTT
+- QoS
+    - Quality of Service. メッセージ配信の品質
+    - QoS0
+        - 最高1回。確実に届く保証はない。再送なし
+    - QoS1
+        - 最低1回。必ず届けるが、重複の可能性あり
+    - QoS2
+        - 正確に1回。必ず届けて重複なし
+
+---
+
+<!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
+### MQTT
+- Will
+    - PublisherがBrokerに接続したときにWill(遺言)としてメッセージを設定。
+    - PubrisherとBrokerが意図せず切断された時に、BrokerがSubscriberにそのメッセージを送信する
+        - Publisherが「死んだ」ことがわかる
+
+---
+
+<!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
+### MQTT
+- Retain
+    - トピックの最後のメッセージをBrokerが保持して、新しいSubscriberにそのメッセージを渡す
+- セキュリティ
+    - TLS(証明書)で暗号化
+
+---
+
+<!-- .slide: class="center"  -->
+# Node-RED
+
+---
+
+<!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
+### Node-RED
+- ブラウザ上で動作するフローエディタ
+    - ![](node-red.png)
+    - ノード(ハードウェアデバイス、API、Webサービス)を繋いでシステムを構築
+
+---
+
+<!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
+### Node-RED
+- IBM Emerging Technologyが作成したOSS。2014年3月発表
+- Node.jsで動作
+- IBM Bluemix(IBMのクラウドサービス)を使うと、簡単にNode-REDを使い始められる
+
+---
+
+<!-- .slide: class="center"  -->
+# ブロックチェーン
+
+---
+
+<!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
+### ブロックチェーン
+- Bitcoinの登場によって注目された技術
+- P2P技術や公開鍵暗号などの既存の技術を用いて実現
+- IoTにおけるデータの保存先にブロックチェーンが注目されている
+
+---
+
+<!-- .slide: data-background="rgb(62,64,87)" class="bg-black tl-l"  -->
+### ブロックチェーン
+- ビットコインのブロックチェーン＝ビットコインの取引履歴
+- ブロック
+    - 取引情報(トランザクション、AさんがBさんに3ビットコイン送った)、前のブロックのハッシュが含まれる
+    - トランザクションはP2Pネットワーク全体で共有される
+    - 前のブロックのハッシュを含むことでブロックがチェーン状に繋がり、ブロックが改ざんされにくくなる
+
+				</script>
+			</section>
+			</div>
+
+		</div>
+
+		<script src="../lib/js/head.min.js"></script>
+		<script src="../js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				slideNumber: 'c/t',
+				history: true,
+				center: false,
+
+				transition: 'none', // none/fade/slide/convex/concave/zoom
+				backgroundTransition: 'none',
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: '../lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../plugin/zoom-js/zoom.js', async: true },
+					{ src: '../plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

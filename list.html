@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ja">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>スライド</title>
+
+		<meta name="description" content="スライド">
+		<meta name="author" content="@oharato">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="presentation_kit/lib/reveal.js/css/reset.css">
+		<link rel="stylesheet" href="presentation_kit/lib/reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="presentation_kit/lib/azusaish.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="presentation_kit/lib/reveal.js/lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'presentation_kit/lib/reveal.js/css/print/pdf.css' : 'presentation_kit/lib/reveal.js/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+<style>
+.slides section:first-of-type hr:first-of-type,
+.slides section:first-of-type hr:first-of-type+p,
+.slides section:first-of-type hr:nth-of-type(2)
+{
+	display: none;
+}
+</style>
+	</head>
+
+	<body>
+
+<div class="reveal"><div class="slides">
+<!-- Any section element inside of this container is displayed as a slide -->
+
+<section id=""
+	data-markdown=""
+	data-separator="^\n\r\n\r\n\r|^\n\n\n"
+	data-separator-vertical="^\n\r\n\r|^\n\n"
+	data-separator-notes="^Note:\n\r?"
+	data-dir="JavaScript"
+	data-charset="utf-8">
+	<script type="text/template">
+# 目次
+- [readme](?md=readme.md)
+- [sample](?md=sample.md)
+- [SDのJenkins移行のBefore After](?md=sd_jenkins_migration.md)
+- [業務に役立つHTML5の小ネタ集](?md=html5tips.md)
+- [開発環境 on Ubuntu18 on NUC](?md=Ubuntu18onNUC.md)
+- [最近、あのピンクの丸いヤツがヤバイ](?md=kirby2016.md)
+- [キーワードで振り返る2015年のIoTトピックス](?md=2015-iot-topics.md)
+	</script>
+</section>
+
+
+</div></div>
+
+		<script src="presentation_kit/lib/reveal.js/js/reveal.js"></script>
+
+		<script>
+			// クエリパラメータからmdファイルを非同期で取得してセットする
+			const sectionMarkdown = document.getElementsByClassName("slides")[0].children[0];
+			const searchParams = new URLSearchParams(window.location.search);
+			const md = searchParams.get('md');
+			if(md) sectionMarkdown.setAttribute('data-markdown', md);
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				slideNumber: 'c/t',
+				history: true,
+				center: true,
+
+				transition: 'none', // none/fade/slide/convex/concave/zoom
+				backgroundTransition: 'none',
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'presentation_kit/lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'presentation_kit/lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'presentation_kit/lib/reveal.js/plugin/highlight/highlight.js', async: true },
+					{ src: 'presentation_kit/lib/reveal.js/plugin/zoom-js/zoom.js', async: true },
+					{ src: 'presentation_kit/lib/reveal.js/plugin/notes/notes.js', async: true }
+				]
+			});
+			Reveal.addEventListener( 'ready', function( event ) {
+
+				Reveal.configure({
+					keyboard: {
+						85: function() { // U キーでトップに戻る
+							var path = window.location.href;
+							window.location.href = path.replace(/\?.*/,'');
+						}  
+					}
+				});
+			} );
+		</script>
+
+	</body>
+</html>
