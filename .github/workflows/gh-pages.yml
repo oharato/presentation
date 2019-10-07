@@ -12,7 +12,7 @@ jobs:
     - name : Checkout
       uses: actions/checkout@master
       with:
-        submodules: true
+        submodules: recursive
 
     - name: Build
       run: mkdir .public && cp -r * .public && mv .public/list.html .public/index.html && mv .public public
