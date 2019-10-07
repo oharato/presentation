@@ -1,0 +1,25 @@
+name: github pages
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-18.04
+    steps:
+    - name : Checkout
+      uses: actions/checkout@master
+      with:
+        submodules: true
+
+    - name: Build
+      run: mkdir .public && cp -r * .public && mv .public/list.html .public/index.html && mv .public public
+
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v2.5.0
+      env:
+        PERSONAL_TOKEN: ${{ secrets. ACCESS_TOKEN }}
+        PUBLISH_BRANCH: gh-pages
+        PUBLISH_DIR: ./public
