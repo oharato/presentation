@@ -222,9 +222,9 @@ datalist要素
 ```html
 <label>メール送信先:<input list="addresses" name="address" /></label>
 <datalist id="addresses">
-    <option value="ohara.tomoki@raccoon.ne.jp">
-    <option value="shimoda.keitaro@raccoon.ne.jp">
-    <option value="abe.hiroyuki@raccoon.ne.jp">
+    <option value="xxxx@example.com">
+    <option value="yyyy@example.com">
+    <option value="zzzz@example.com">
 </datalist>
 ```
 
@@ -232,9 +232,9 @@ datalist要素
 
 <label>メール送信先:<input list="addresses" name="address" style="font-size:1rem;"/></label>
 <datalist id="addresses">
-    <option value="ohara.tomoki@raccoon.ne.jp">
-    <option value="shimoda.keitaro@raccoon.ne.jp">
-    <option value="abe.hiroyuki@raccoon.ne.jp">
+    <option value="xxxx@example.com">
+    <option value="yyyy@example.com">
+    <option value="zzzz@example.com">
 </datalist>
 
 

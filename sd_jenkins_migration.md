@@ -131,8 +131,8 @@ pipeline {
                     emailext(
                         body: mailBody(),
                         subject: 'SD定期監視(会員登録)アラート／$DEFAULT_SUBJECT',
-                        to: 'notification-sd-emergency@apps.raccoon.ne.jp',
-                        replyTo: 'notification-sd-emergency@apps.raccoon.ne.jp'
+                        to: 'xxxx@example.com',
+                        replyTo: 'xxxx@example.com'
                     )
                 }
                 slackSend attachments: attachments()
@@ -188,7 +188,7 @@ pipeline {
 | |ci-01|sd-ci01|
 |--|--|--|
 |メールサーバ|gmail|securemx|
-|会員登録用メール|sd.regist.selenium.yyyyMMddhhmmss@catchall.raccoon.ne.jp|sd_e2e@raccoon.ne.jp|
+|会員登録用メール|xxxx@example.com|yyyy@example.com|
 |メール受信|gmailにブラウザログインして、メールを検索、該当メールを開く|IMAPでメールサーバにログイン、メールを検索、該当メールを取得|
 
 
@@ -241,7 +241,7 @@ require('./delete_old_mails.js');
 ## submit_email.js
 メールアドレスを入力して登録ボタンクリック
 ```
-const email = 'sd_e2e@raccoon.ne.jp';
+const email = 'yyyy@example.com';
 await page.type('form[action="/p/entry/mail/send.do"] input[name="mailAddress"]', email);
 await Promise.all([
     page.click('form[action="/p/entry/mail/send.do"] input[type="button"]'),
